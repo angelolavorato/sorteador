@@ -1,19 +1,19 @@
 // Lista de 14 nomes para o sorteio
 const nomes = [
-  'ANA CLÁUDIA',
-  'CLEUZA',
-  'DANIEL',
-  'DAVÍ',
-  'EVERALDO',
-  'GABRIELA',
-  'JULIANA',
-  'KAREN',
-  'LAVÍNIA ',
-  'LEISE',
-  'NILMAR',
-  'PAULO CESAR',
-  'VICTORIA',
-  'WESLEINE'
+  'Ana',
+  'Fabiolla',
+  'Nara',
+  'Karine',
+  'Mateus',
+  'Arley',
+  'Fabricia',
+  'Gabriel',
+  ' ',
+  '',
+  '',
+  ' ',
+  '',
+  ''
 ]
 
 // Função para embaralhar a lista de nomes (usando o algoritmo Fisher-Yates)
