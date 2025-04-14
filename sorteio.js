@@ -8,33 +8,24 @@ const nomes = [
   'Arley',
   'Fabricia',
   'Heitor',
-  'Iasmim',
-  '',
-  '',
-  ' ',
-  '',
-  ''
+  'Iasmim'
 ]
 
 // Função para embaralhar a lista de nomes (usando o algoritmo Fisher-Yates)
 function embaralhar(array) {
-  // Percorre o array de trás para frente
   for (let i = array.length - 1; i > 0; i--) {
-    // Gera um índice aleatório entre 0 e i
     const j = Math.floor(Math.random() * (i + 1))
-    // Troca o elemento na posição i com o elemento na posição j
-    ;[array[i], array[j]] = [array[j], array[i]] // Troca de valores usando desestruturação
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  // Retorna o array embaralhado
   return array
 }
 
 // Embaralha a lista de nomes
 const nomesEmbaralhados = embaralhar(nomes)
 
-// Divide a lista embaralhada em dois grupos de 7 nomes
-const grupo1 = nomesEmbaralhados.slice(0, 7) // Seleciona os primeiros 7 nomes
-const grupo2 = nomesEmbaralhados.slice(7, 14) // Seleciona os próximos 7 nomes
+// Divide a lista embaralhada em dois grupos
+const grupo1 = nomesEmbaralhados.slice(0, Math.ceil(nomesEmbaralhados.length / 2)) // Metade arredondada para cima
+const grupo2 = nomesEmbaralhados.slice(Math.ceil(nomesEmbaralhados.length / 2)) // Restante
 
 // Exibe os dois grupos no console
 console.log('Grupo 1:', grupo1)
